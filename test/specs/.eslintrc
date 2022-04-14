@@ -1,0 +1,37 @@
+{
+  "plugins": [
+      "jasmine",
+      "wdio",
+      "only-warn"
+    ],
+  "env": {
+      "browser": true,
+      "commonjs": true,
+      "es2021": true,
+      "jasmine": true
+  },
+  "globals": {
+      "process": true,
+      "__dirname": true,
+      "metaData": true,
+      "defaultDir": true,
+      "logger" : true
+  },
+  "extends": [
+      "plugin:wdio/recommended",
+      "eslint:recommended",
+      "plugin:import/recommended"
+  ],
+  "parserOptions": {
+      "ecmaVersion": 12
+  },
+  "ignorePatterns": ["node_modules/**", "ClearCeInstances/**"],
+  "rules": {
+      "jasmine/no-focused-tests": 0,
+      "jasmine/no-suite-dupes": [
+      2,
+      "branch"
+      ],
+      "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
+  }
+}

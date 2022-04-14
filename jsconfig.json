@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "module":"commonJS",
+        "types": [
+            "node",
+            "@wdio/jasmine-framework"
+        ],
+        "baseUrl": "."
+    },
+    "include": [
+        "**/*.js",
+        "**/*.json",
+        "node_modules/webdriverio",
+        "node_modules/@wdio/jasmine-framework"
+      ],
+    
+}
